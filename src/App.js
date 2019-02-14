@@ -41,6 +41,7 @@ class App extends React.Component {
 
     this.setState({
       taskArray: [...this.state.taskArray, newTask],
+      taskInput: ''
     });
   };
 
