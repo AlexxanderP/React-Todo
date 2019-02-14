@@ -45,6 +45,14 @@ class App extends React.Component {
     });
   };
 
+
+  clearAll = e => {
+    e.preventDefault();  
+    this.setState({
+      taskArray: []
+    });
+};
+
   handleChanges = e => {
     this.setState({
       [e.target.name]: e.target.value
@@ -57,6 +65,7 @@ class App extends React.Component {
         <h1>Todo List</h1>
         <TodoList taskArray={this.state.taskArray} />
         <TodoForm addTask={this.addTask} taskInput={this.state.taskInput} handleChanges={this.handleChanges} />
+        <button onClick={this.clearAll}>Clear All</button>
       </div>
     );
   }
