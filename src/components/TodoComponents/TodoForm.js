@@ -11,8 +11,10 @@ const TodoForm = (props) => {
         placeholder="Enter Task"
       />
       <button type="submit">Add Task</button>
+      <button onClick={props.clearCompleted}>Clear Completed</button>
     </form>
   );
 };
 
 export default TodoForm;
+

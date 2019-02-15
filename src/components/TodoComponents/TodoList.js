@@ -3,9 +3,9 @@ import Todo from './Todo';
 
 const TodoList = (props) => (
   <ul className="todo-list">
-    {props.taskArray.map((taskOfMap, index) => (
-      <Todo key={index} task={taskOfMap.task} />
-    ))}
+    {props.taskArray.map((taskOfMap, index) => {
+      return (<Todo key={index} task={taskOfMap} toggleTask={props.toggleTask} />);
+    })}
   </ul>
 );
 
